@@ -1,0 +1,89 @@
+/* h1 {
+            color: brown;
+            font-size: 5rem;
+        } */
+.heading {
+    color: #45e61c;
+}
+
+#title {
+    color: rgb(227, 21, 103);
+}
+
+.btn-recomendation {
+    background-color: #ff9417;
+    border-radius: 0.429vw;
+    border: none;
+    outline: none;
+    min-width: 24.285vw;
+    height: 3.932vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.701vw;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 1.097vw;
+    line-height: 1.357vw;
+    letter-spacing: .013vw;
+    color: #fff;
+}
+
+.card {
+    margin-top: 5rem;
+
+    border: 2px dashed black;
+    /* border-width: 2px;
+            border-color: rgb(90, 90, 220);
+            border-style: dashed; */
+    border-radius: 10px;
+    margin-left: 30px;
+    transition: width 5s, transform 3s;
+    transition-delay: 2s;
+}
+
+.card:hover {
+    width: 16rem;
+    transform: rotate(360deg);
+}
+
+.bg-image {
+    background-image: url("./Strategi-Pelatihan-dan-Pengembangan-SDM-Karyawan-Perusahaan-01.webp");
+    width: 16rem;
+    height: 9rem;
+    background-size: cover;
+}
+
+.sub-card {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+img {
+    width: 16rem;
+    height: 9rem;
+    filter: blur(2px);
+}
+
+.kotak {
+    width: 200px;
+    height: 200px;
+    /* background-image: url("./Strategi-Pelatihan-dan-Pengembangan-SDM-Karyawan-Perusahaan-01.webp"); */
+    background-color: aquamarine;
+    animation: animasiKotak 2s ease 3 alternate forwards running;
+}
+
+@keyframes animasiKotak {
+    0% {
+        background-color: aquamarine;
+    }
+
+    50% {
+        background-color: #ff9417;
+    }
+
+    100% {
+        background-color: black;
+        width: 500px;
+    }
+}

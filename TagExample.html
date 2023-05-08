@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        .text-mark{
+            background-color: yellow;
+        }
+        table, td{
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function validation() {
+            let x = document.forms["myForms"]["fname"].value;
+            
+            // ini untuk mengecek nama
+            if (x == "") {
+                alert("No.hp harus diisi yaaa");
+                return false;
+            }else{
+                alert("Terimakasih telah mengisi No.hp");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--ini hanya informasi-->
+    <!-- <h1>Website Arkademi</h1>
+    <h4>Website Arkademi</h4>
+
+    <b>
+        <a href="./Home.html">Arkademi</a>
+    </b>
+    <a href="./Home.html">Arkademi</a>
+
+    <b>Promo dan Even</b>
+
+    <div class="bold">Promo dan Even</div>
+
+    <img alt="pendidikan" src="./icon-pendidikan.png" /> -->
+
+    <mark>ini informasi penting</mark>
+
+    <div class="text-mark">ini informasi penting</div>
+
+    <!-- ini adalah contoh penggunaan form validation -->
+    <!-- <a href="./Home.html">Arkademi</a>
+    <form name="myForms" onsubmit="return validation()" method="post">
+        Number: <input type="number" name="fname" />
+        <input type="submit" value="Submit" />
+    </form> -->
+
+    <form name="myForms" onsubmit="return validation()" method="post">
+        Number: <input type="number" name="fname" />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>No.hp</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Siti</td>
+                <td>0897867543</td>
+                <td>Jakarta</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>ini adalah paragraf</p>
+    <div>ini adalah paragraf</div> -->
+</body>
+</html>

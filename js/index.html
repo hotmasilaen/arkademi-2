@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            color: red;
+        }
+        .box {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            transition: background-color 1s;
+        }
+
+        #myDiv {
+            background-color: red;
+            color: white;
+            animation-name: example;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            0% {background-color: red; left: 0px; top: 0px;}
+            50% {background-color: blue; left: 200px; top: 200px;}
+            100% {background-color: red; left: 0px; top: 0px;}
+        }
+        #myDiv{
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <p id="title">Hari ini kita akan belajar Javascript</p>
+
+    <div id="myDiv">Click Me</div>
+
+    <form name="myForms" onsubmit="return validation()" method="post">
+        Masukkan Text: <input type="text" name="fname" />
+        <!-- Number2: <input type="number" name="fname2" /> -->
+        <input type="submit" value="Submit" />
+        <!-- <p id="hasil"></p> -->
+    </form>
+
+    <p>Nama saya adalah:</p>
+    <p id="nama"></p>
+
+    <script>
+        // const title = document.getElementById("title")
+        // title.style.color = "blue"
+        // title.style.fontSize = "20px"
+        // title.innerHTML = "Hari ini merupakan hari yang <strong>ke-4</strong>"
+        // title.addEventListener('click', () => {
+        //     title.style.color = "black"
+        // });
+
+        // const myDiv = document.getElementById('myDiv');
+
+        // myDiv.addEventListener('click', () => {
+        //     myDiv.style.animationPlayState = 'paused';
+        // });
+
+        function validation() {
+            let x = document.forms["myForms"]["fname"].value;
+            // let y = document.forms["myForms"]["fname2"].value;
+            // const elHasil = document.getElementById("hasil")
+            // console.log(x);
+            // const hasil = x + y
+            // elHasil.innerHTML = "Hasilnya adalah: " + hasil
+
+
+            // ini untuk mengecek nama
+            if (x !== "nama") {
+                alert("kamu memasukkan text yang salah");
+                return false;
+            } else {
+                alert("Terimakasih telah mengisi text dengan benar");
+            }
+        }
+
+        let nama = "Fulan";
+        // console.log(nama);
+        // alert(nama);
+        document.getElementById("nama").innerHTML = nama
+
+        const dataPeserta = {
+            name: ["Fulan"],
+            umur: 21,
+            alamat: {
+                provinsi: "Sumatera Utara",
+                kodePos: {}
+            }
+        };
+        console.log(typeof dataPeserta);
+
+        const kelasHTML = [{
+            hari: "selasa",
+            jenisKelas: "frontend"
+        }, "2", "3"]
+        console.log(typeof kelasHTML);
+
+
+        const num1 = 11
+        const num2 = 3
+        const kelas = "3A"
+
+        console.log(num1 % num2);
+        console.log(num2 < num1);
+        console.log(kelas == "3A");
+
+        // console.log("tipe data num1:" + typeof num1);
+        // console.log("tipe data num2:" + typeof num2);
+
+
+        const myString = 'Hello! world. This is my first time using javascript';
+        console.log(myString);
+        console.log(myString?.length);
+        console.log(myString?.slice(14, 19));
+        console.log(myString?.replace("Hello! world.", "Hi!"));
+        console.log(myString?.toUpperCase(myString));
+        console.log(myString?.toLowerCase(myString));
+
+        console.log(kelasHTML[2]);
+        console.log(kelasHTML.length);
+
+        for(var i = 1; i <= 5; i++){
+            console.log("Ini pengulangan ke: " + i);
+        }
+
+        const fruits = ["Banana", "Apel", "Manggo"]
+
+        for(var i in fruits){
+            console.log("The fruit is: " + fruits[i]);
+        }
+
+        console.log("Provinsi: " + dataPeserta.alamat.provinsi);
+
+    </script>
+</body>
+</html>
